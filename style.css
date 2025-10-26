@@ -1,0 +1,184 @@
+:root {
+  --crl-white: hsl(0, 0%, 100%);
+  --crl-stone-100: hsl(30, 54%, 90%);
+  --crl-stone-150: hsl(30, 18%, 87%);
+  --crl-stone-600: hsl(30, 10%, 34%);
+  --crl-stone-900: hsl(24, 5%, 18%);
+  --crl-brown-800: hsl(14, 45%, 36%);
+  --crl-rose-800: hsl(332, 51%, 32%);
+  --crl-rose-50: hsl(330, 100%, 98%);
+  
+  --font-body: "outfit", sans-sarif;
+  --font-heading: "young-sarif", sarif;
+  
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  
+  --fs-400: 1.175rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2.25rem;
+  --fs-900: 2.75rem;
+}
+
+*,
+*::befor,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 48em) {
+  body{
+    display: grid;
+    place-items: center;
+  }
+}
+
+/* Typography */
+@font-face {
+  font-family: "outfit";
+  src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "young-sarif";
+  src: url("/assets/fonts/young-sarif/YoungSerif-Regular.ttf") format("truetype-variations");
+  font-weight: 100 900;
+}
+
+body{
+  background-color: var(--crl-rose-50);
+  color: var(--crl-stone-600);
+  font-family: var(--font-body);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+}
+
+h1 {
+  color: var(--crl-stone-900);
+  font-size: var(--fs-900);
+}
+
+h1,
+h2{
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  color: var(--crl-brown-800);
+  font-size: var(--fs-600);
+}
+
+.prep-time h2 {
+  color: var(--crl-rose-800);
+  font-family: var(--font-body);
+  font-size: var(--fs-500);
+}
+
+.recipe-page {
+  background-color: var(--crl-white);
+}
+
+/* Utility */
+.flow > * + * {
+  margin-top: 1.3rem;
+}
+
+.flow-small * + * {
+  margin-top: .75rem;
+}
+
+/* Layout */
+.wrapper {
+  padding-inline: 2rem;
+}
+
+@media screen and (min-width: 48em){
+  .recipe-page {
+    border-radius: 1rem;
+    max-inline-size: 500px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+  
+  picture img {
+    border-radius: 1rem;
+  }
+  
+  .wrapper {
+    padding-inline: 0;
+  }
+}
+
+.prep-time {
+  background-color: var(--crl-rose-50);
+  border-radius: .75rem;
+  padding: 1.5rem;
+}
+
+.ingredients,
+.instractions {
+  border-bottom: 1px solid var(--crl-stone-150);
+  padding-bottom: 2rem;
+}
+
+ul,
+ol {
+  padding: 0 1.5rem;
+}
+
+li {
+  padding: 0 1rem;
+}
+
+ul li::marker,
+ol li::marker{
+  color: var(--crl-brown-800);
+}
+
+ol li::marker {
+  font-weight: var(--fw-semibold);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr, td {
+  border-bottom: 1px solid var(--crl-stone-150);
+  padding: .5rem 2rem;
+}
+
+td:nth-child(even) {
+  color: var(--crl-brown-800);
+  text-align: left;
+}
