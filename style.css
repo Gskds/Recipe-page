@@ -74,7 +74,7 @@ body {
 }
 
 body{
-  background-color: var(--crl-rose-50);
+  background-color: var(--crl-stone-100);
   color: var(--crl-stone-600);
   font-family: var(--font-body);
   font-size: var(--fs-400);
