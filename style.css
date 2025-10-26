@@ -123,8 +123,6 @@ h2 {
 
 @media screen and (min-width: 48em){
   .recipe-page {
-    display: grid;
-    align-content: center;
     border-radius: 1rem;
     max-inline-size: 700px;
     margin-inline: auto;
