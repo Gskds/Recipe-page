@@ -59,13 +59,13 @@ body {
 @font-face {
   font-family: "outfit";
   src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
+  font-weight: 400 600 700;
 }
 
 @font-face {
   font-family: "young-sarif";
   src: url("/assets/fonts/young-sarif/YoungSerif-Regular.ttf") format("truetype-variations");
-  font-weight: 400 600 700;
+  font-weight: 400;
 }
 
 body{
@@ -119,7 +119,7 @@ h2 {
 @media screen and (min-width: 48em){
   .recipe-page {
     border-radius: 1rem;
-    max-inline-size: 700px;
+    max-inline-size: 1110px;
     margin-inline: auto;
     padding-inline: 2rem;
   }
